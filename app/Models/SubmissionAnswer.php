@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubmissionAnswer extends Model
 {
-    protected $fillable = ['submission_id', 'answer_id'];
+    protected $fillable = ['submission_id', 'question_id', 'answer_id'];
 
     public function submission()
     {

@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Update submission_answers migration
         Schema::create('submission_answers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('submission_id')->constrained('submissions');
+            $table->foreignId('question_id')->constrained('questions');
             $table->foreignId('answer_id')->constrained('answers');
             $table->timestamps();
         });
